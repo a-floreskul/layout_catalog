@@ -1,15 +1,13 @@
-$button-color: #00acdc;
-
 .product-card {
   width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
   padding: 32px 16px 16px;
+  transition: transform 300ms ease;
 
-  &__link {
-    text-decoration: none;
-    color: inherit;
+  &:hover {
+    transform: scale(1.2);
   }
 
   &__image {
@@ -19,18 +17,28 @@ $button-color: #00acdc;
     display: block;
   }
 
-  // &__body {
-  //   margin-left: 16px;
-  //   margin-right: 16px;
-  // }
-
   &__title {
+    transition: color 300ms ease;
     color: #060b35;
     margin: 0 0 4px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
   }
+
+  &:hover &__title {
+    color: #34568b;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // &__body {
+  //   margin-left: 16px;
+  //   margin-right: 16px;
+  // }
 
   &__code {
     font-weight: 400;
